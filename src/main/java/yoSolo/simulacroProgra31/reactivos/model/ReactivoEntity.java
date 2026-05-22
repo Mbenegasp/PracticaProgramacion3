@@ -1,4 +1,4 @@
-package yoSolo.simulacroProgra31.reactivos;
+package yoSolo.simulacroProgra31.reactivos.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,4 +26,9 @@ public class ReactivoEntity {
     private Boolean esPrecursorQuimico;
     @Column(name = "activo", nullable = false)
     private Boolean activo;
+
+    @PrePersist
+    protected void onCreate(){
+        this.activo = true;
+    }
 }

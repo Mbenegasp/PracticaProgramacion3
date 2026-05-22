@@ -1,3 +1,13 @@
 spring:
-  application:
-    name: simulacroProgra3.1
+  datasource:
+    url: jdbc:mysql://localhost:3306/quimica
+    username: "root"
+    password: "gustavocerati"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
